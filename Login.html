@@ -1,0 +1,44 @@
+<!-- Home nupp peaks tausta värvi muutma, kui üle libistada ja vajutamine viib Home ehk Login tabile -->
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- viewport on selleks, et kohandaks suuruse seadmele -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- Ctrl + K C    teeb rea comment'iks -->
+  <link rel="icon" href="res/images/favicon.ico">    <!-- Ikoonike, mis on tabi kõige üleval -->
+  <link rel="stylesheet" href="res/css/style.css"><!-- Lisame CSS faili -->
+  <title>Login</title>
+</head>
+<body class="body">
+    <header class="header">
+        <nav class="nav">
+            <a class="koti-link" href="Login.html">Koti</a> <!-- Home nupu vajutamine värskendab lehte -->
+            <a href="#">
+                <img src="res/images/user_icon.png" width="50" height="50" alt="User icon"></a> <!-- "alt" on kui tekib viga pildi kuvamisel, siis kuvatakse "alt" tekst -->
+        </nav>
+    </header>
+
+    <section class="section"> 
+        <h1> <strong> Tervetuloa Postamaan </strong> </h1> <!-- H1 pealkiri; strong on boldis -->
+        <div class="create_or_log">
+            <a href="https://en.wikipedia.org/wiki/Wikipedia:Why_create_an_account%3F" target="_blank" >Luo tili</a> <!-- kui target pole blank, siis avab lahtiolevas tabis -->
+                <p>tai</p>
+                <p>Ole hyvä ja kirjaudu sisään</p>           
+        </div>
+        <ul> 
+            <li> <input id="email" type="email" placeholder="Sähköposti"> </li> <!-- placeholder disappears when typing starts. Kui type on õige, siis nõuab õiget formaati -->
+            <li> <input id="password" type="password" placeholder="Salasana"> </li> <!--  type=password ei näita kui kirjutad-->
+            <li class="button"> <button type="submit" href="index.html">Kirjaudu sisään</button> </li>
+        </ul>
+        <div>
+            <a href="https://moodymusings.com/i-forgot-my-password-and-other-excuses-for-your-incompetence/" target="_blank" >Salasana unohtunut</a> </li> <!-- kui target pole blank, siis avab lahtiolevas tabis -->
+        </div>
+        <div>
+
+        </div>
+    </section>
+
+    <script type="text/javascript" src="src/js/script.js"></script> <!-- Lisame Javascripti faili -->
+</body>
+</html>

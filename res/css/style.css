@@ -1,0 +1,78 @@
+* {
+    font-family: sans-serif;
+    text-decoration: none; /* Remove underline from links */
+    box-sizing: border-box; /*The box-sizing CSS property sets how the total width and height of an element are calculated. Border-box: padding, and border are included in the width and height:*/
+  }
+
+.nav {
+    padding:0.5%; /* Paneb navbar'i elemendid kasti ülalt-alt äärest natuke kaugemale */
+    display: flex; /* Turns the container into a flexbox. */
+    justify-content: space-between; /* Pushes first and last items to opposite sides */
+    align-items: center; /* Centers items vertically */
+    background-color: #007BFF; /* Background color for the nav bar */
+    border: 1px solid #646174; /*  border of the navbar*/
+    border-radius: 5px; /*  rounded corners */
+}
+
+.nav a {
+    color: #fff; /* Set link color */
+    margin-left: 1.5%;
+    font-size: 30px; /* teksti suurus */
+}
+
+.koti-link:hover {
+    background-color: #000; /* Hover effect only for the Koti link */
+}
+
+
+body > * { /*See, kus on navbar ja login kast  */
+    margin-bottom: 20px; /* Lisab 20px vahe igale elemendile */
+}
+
+
+.section { /* See, kus on login värk */
+    padding-bottom: 19px; /* Tekst on kastis altäärest natuke eemal */
+    margin-top: 5%;
+    text-align: center;
+
+    background-color: #ededed;
+    border: 1px solid #646174;
+    border-radius: 5px;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75); /*  kasti vari */
+    width: 50%;  /* Teeb kasti kitsamaks */
+    margin: auto; /* Paneb kasti keskele */
+}
+
+.create_or_log p{
+    margin: 8px;
+}
+
+.section a{
+    /* Kõik sectionis, mis on hyperlingis */
+    color: #56a1d6;
+}
+
+ul{
+    margin: 0;
+    padding: 0; /* lugemine hakkab nullist ehk siis on keskel */
+}
+
+ul li { /* unititled listi itemid ehk kirjutamiskastid */
+    padding: 5px; /* Sisemised vahed */
+    list-style: none; /*: none = pole palle nimekirja elementidel    */
+}
+input {
+        width: 150px;  /*  wider */
+        height: 30px;  /*  shorter in height */
+        margin: auto;
+}
+
+button {
+    padding: 10px 20px;/* paneb kasti sees oleva teksti äärtest kaugemale ehk kokkuvõttes läheb nupp suuremaks */
+    background-color: #007BFF;
+    color: white; /* teksti värv */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;/* kursor muutub sõrmeks, kui on peal */
+    font-size: 16px;
+}
