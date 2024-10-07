@@ -1,4 +1,3 @@
-<!-- Home nupp peaks tausta värvi muutma, kui üle libistada ja vajutamine viib Home ehk Login tabile -->
 <!DOCTYPE html>
 <html lang="en"></html>
 <head>
@@ -26,12 +25,16 @@
                 <p>tai</p>
                 <p>Ole hyvä ja kirjaudu sisään</p>           
         </div>
-        <ul> 
-            <li> <input id="email" type="email" placeholder="Sähköposti"> </li> <!-- placeholder disappears when typing starts. Kui type on õige, siis nõuab õiget formaati -->
-            <li> <input id="password" type="password" placeholder="Salasana"> </li> <!--  type=password ei näita kui kirjutad-->
-            <li class="button"> <button type="submit" href="index.html">Kirjaudu sisään</button> </li>
-        </ul>
-        <div>
+
+        <form action="index.html" method="get">  <!-- läheb index.html lehele, kui mõlemad väljad on täidetud -->
+            <ul> 
+                <li> <input id="email" type="email" placeholder="Sähköposti" required> </li> <!-- placeholder disappears when typing starts. Kui type on õige, siis nõuab õiget formaati -->
+                <li> <input id="password" type="password" placeholder="Salasana" required> </li> <!--  type=password ei näita kui kirjutad: Required ütleb, et väli peab olema täidetud-->
+                <li class="button"> <button type="submit" >Kirjaudu sisään</button> </li>
+            </ul>
+        </form >
+       
+        <div>  <!-- Kas unustasid salasõna? -->
             <a href="https://moodymusings.com/i-forgot-my-password-and-other-excuses-for-your-incompetence/" target="_blank" >Salasana unohtunut</a> </li> <!-- kui target pole blank, siis avab lahtiolevas tabis -->
         </div>
         <div>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- viewport on selleks, et kohandaks suuruse seadmele -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ctrl + K C    teeb rea comment'iks -->
+  <link rel="icon" href="res/images/favicon.ico">    <!-- Ikoonike, mis on tabi kõige üleval -->
+  <link rel="stylesheet" href="res/css/style.css"><!-- Lisame CSS faili -->
+  <title>Login</title>
+</head>
+<body class="body">
+    <header class="header">
+        <nav class="nav">
+            <a class="koti-link" href="Login.html">Koti</a> <!-- Home nupu vajutamine värskendab lehte -->
+            <a href="#">
+                <img src="res/images/user_icon.png" width="50" height="50" alt="User icon"></a> <!-- "alt" on kui tekib viga pildi kuvamisel, siis kuvatakse "alt" tekst -->
+        </nav>
+    </header>
+
+    <section class="section">
+        <form action="index.html" method="get">  <!-- läheb index.html lehele, kui üks väli on täidetud -->
+            <div id="addPost_div">
+                <p id="addPost_text"> Lähetä sisältöä </p> 
+                <textarea id="post_body" placeholder="tekstialue" rows="4" cols="50"></textarea> <!-- placeholder disappears when typing starts. Kui type on õige, siis nõuab õiget formaati -->
+            </div> 
+            <div id="addPost_div">
+                <p id="addPost_text">Valitse tiedosto</p>           
+                <input id="file" type="file" name="file" style="display:none;">
+                <label for="file" class="file_button">Valitse</label>
+            </div>
+                
+            <button type="submit" >Luo viesti</button> 
+        </form >
+    </section>
+
+</body>
+</html>
