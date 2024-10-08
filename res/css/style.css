@@ -21,8 +21,12 @@ Kopeeri rida: Shft + Alt + Nool
 
 .nav a {
     color: #fff; /* Set link color */
-    margin-left: 1.5%;
+    margin-left: 10px;
     font-size: 30px; /* teksti suurus */
+}
+.kotiEma{
+    display: flex;
+    
 }
 
 .koti-link:hover { /* PSEUDO-classi järgi */
@@ -107,4 +111,42 @@ button {
     border: #000;
     padding: 4px 10px;/* paneb kasti sees oleva teksti äärtest kaugemale ehk kokkuvõttes läheb nupp suuremaks */
     cursor: pointer;/* kursor muutub sõrmeks, kui on peal */
+}
+
+/* SEE TAB, KUS ON POSTITUSED */
+section{
+    padding: 10px 25px;
+    margin: 10px;
+    display: block;
+    background-color: #46504b;
+    border-radius: 15px;
+    width: 50%;  /* Teeb kasti kitsamaks */
+    margin: auto; /* Paneb kasti keskele */
+    margin-top: 15px;
+    max-width: 100%;
+}
+
+.kuupaevJaPilt{
+    display: flex; /* Turns the container into a flexbox. */
+    justify-content: space-between; /* Pushes first and last items to opposite sides */
+    align-items: center; /* Centers items vertically */
+}
+
+
+.postWithPic{
+    width: 100%;
+    display: block;
+    margin-right: 10px;
+}
+
+.picture{
+    height: 100px;
+    width: 100px;
+}
+
+@media(max-width:800px){
+    .picture{
+        height: 10px;
+        width: 10px;
+    }
 }
