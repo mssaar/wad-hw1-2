@@ -118,7 +118,7 @@ section{
     padding: 10px 25px;
     margin: 10px;
     display: block;
-    background-color: #46504b;
+    background-color: #366e52;
     border-radius: 15px;
     width: 50%;  /* Teeb kasti kitsamaks */
     margin: auto; /* Paneb kasti keskele */
@@ -130,23 +130,22 @@ section{
     display: flex; /* Turns the container into a flexbox. */
     justify-content: space-between; /* Pushes first and last items to opposite sides */
     align-items: center; /* Centers items vertically */
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 
-.postWithPic{
-    width: 100%;
-    display: block;
-    margin-right: 10px;
+.post_picture img {
+    width: 60%; /* Set the width as a percentage of the parent element */
 }
 
-.picture{
-    height: 100px;
-    width: 100px;
+#final{
+    color: #fff;
+    background-color: #8d4141;
+    border-radius: 50px;
+    border: #000;
+    margin-top: 5px;
+    padding: 2px;
 }
 
-@media(max-width:800px){
-    .picture{
-        height: 10px;
-        width: 10px;
-    }
-}
