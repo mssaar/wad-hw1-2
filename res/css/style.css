@@ -52,6 +52,13 @@ body > * { /*See, kus on navbar ja login kast  */
     margin: auto; /* Paneb kasti keskele */
 }
 
+@media (max-width: 800px) { /*Kui on telo, siis ...*/
+    .section,
+    .post { 
+        width: 270px;/*...sisselogimise kast ja postituse kast laiemaks*/
+    }
+}
+
 .create_or_log a ~ p{/* Kõik tekstid, mis on creatorlog lapsed ja tulevad pärast a'd */
     margin: 8px;
 }
