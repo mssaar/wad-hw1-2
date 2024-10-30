@@ -57,6 +57,9 @@ body > * { /*See, kus on navbar ja login kast  */
     .post { 
         width: 270px;/*...sisselogimise kast ja postituse kast laiemaks*/
     }
+    .postPic{
+        width: 210px;
+    }
 }
 
 .create_or_log a ~ p{/* Kõik tekstid, mis on creatorlog lapsed ja tulevad pärast a'd */

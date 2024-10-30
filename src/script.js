@@ -2,39 +2,57 @@ window.onload = function() {
 
 
     fetch('../res/json/myjson.json') //  ../..   -lähen 1x tagasi
-        .then((response) => response.json()) //Response on see,kus on status:200, body ning veel igast parameetrite väärtused. .json() loeb õigemale kujule
-        console.log("lol")
+        .then((response) => 
+            response.json()) //Response on see,kus on status:200, body ning veel igast parameetrite väärtused. .json() loeb õigemale kujule
         .then(json => {
-            console.log("lol")
             console.log(json); //json on andmed,kus on 100 asja, iganäeb välja nt: {id:1, name:Aadu, title:suema, body:tahan süüa}
             
             for (let i=0; i < json.length; i++){ // Kordus, mis käib läbi kõik elemendid. 
-                console.log(json[i]);
+                //console.log(json[i]);
 
-                let section = document.createElement("section"); // Loob uue <div> elemendi.
+                let section = document.createElement("section"); // Loob uue <div> elemendi, mis on iga postitus
                 section.className = 'post'
                     let h1 = document.createElement("h1");
+                    h1.className = 'kuupaevJaPilt'
                         let a = document.createElement("a");
-                        a.innerText = (json[i].author_pic); //Võtame json'ist author_pic'i ja salvestame muutujasse a ehk a' le lisame user_icon pildi
+                        a.className = 'userPic'
+                            let userImage = document.createElement("img");
+                            userImage.src = json[i].author_pic;  // kasutaja pilt
+                            userImage.alt = "User Icon";  
+                            userImage.width = 50;
+                            userImage.height = 50;
+                            a.appendChild(userImage);
                         h1.appendChild(a);
                         let p = document.createElement("p");
                         p.innerText = (json[i].created_time); //Võtame json'ist created_time'i ja salvestame muutujasse p
                         h1.appendChild(p);
                     section.appendChild(h1);
 
-                    let div = document.createElement("div");
-                    div.className = 'postWithPic';
-                        let div_a = document.createElement("a");
-                        div_a.innerText = (json[i].image); //Võtame json'ist image ja salvestame muutujasse div_a ehk div_a'le lisame postituse pildi
-                        div.appendChild(div_a);
-                    section.appendChild(div);
+                    if( json[i].image != null){ //Kui pilt on olemas, siis lisame pildi sektsiooni ja pildi
+                        let div = document.createElement("div");
+                        div.className = 'postWithPic';  
+                            let div_a = document.createElement("a");
+                                let postImage = document.createElement("img");
+                                postImage.className = 'postPic'
+                                postImage.src = json[i].image; // lisame postituse pildi. Võtame json'ist image ja salvestame muutujasse div_a ehk div_a'le lisame postituse pildi
+                                postImage.alt = "Post Image";  
+                                postImage.width = 570;
+                                div_a.appendChild(postImage);
+                            div.appendChild(div_a);
+                        section.appendChild(div);
+                    }
 
-                    let footer = document.createElement("footer");
+                    let footer = document.createElement("footer"); // Postituse kirjutatud sisu ja like
                         let footer_p = document.createElement("p");
                         footer_p.innerText = (json[i].content); //Võtame json'ist content ja salvestame muutujasse footer_p ehk lisame postituse kommentaari
                         footer.appendChild(footer_p);
                         let footer_a = document.createElement("a");
-                        // a' le lisame like pildi
+                            let likeImage = document.createElement("img");
+                            likeImage.src = json[i].like;  //  lisame like pildi
+                            likeImage.alt = "Like Image";  
+                            likeImage.width = 35;
+                            likeImage.height = 35;
+                            footer_a.appendChild(likeImage);
                         footer.appendChild(footer_a);
                     section.appendChild(footer);
 
