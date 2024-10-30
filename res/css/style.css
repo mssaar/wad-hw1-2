@@ -58,7 +58,7 @@ body > * { /*See, kus on navbar ja login kast  */
         width: 270px;/*...sisselogimise kast ja postituse kast laiemaks*/
     }
     .postPic{
-        width: 210px;
+        width: 210px;  /* Postituse pilt kitsamaks */
     }
 }
 

@@ -10,7 +10,7 @@ window.onload = function() {
             for (let i=0; i < json.length; i++){ // Kordus, mis käib läbi kõik elemendid. 
                 //console.log(json[i]);
 
-                let section = document.createElement("section"); // Loob uue <div> elemendi, mis on iga postitus
+                let section = document.createElement("section"); // Loob uue <div> elemendi, kus on postitus
                 section.className = 'post'
                     let h1 = document.createElement("h1");
                     h1.className = 'kuupaevJaPilt'
@@ -33,7 +33,7 @@ window.onload = function() {
                         div.className = 'postWithPic';  
                             let div_a = document.createElement("a");
                                 let postImage = document.createElement("img");
-                                postImage.className = 'postPic'
+                                postImage.className = 'postPic' //Et saaks pärast telo variandil pilti kitsamaks teha
                                 postImage.src = json[i].image; // lisame postituse pildi. Võtame json'ist image ja salvestame muutujasse div_a ehk div_a'le lisame postituse pildi
                                 postImage.alt = "Post Image";  
                                 postImage.width = 570;
@@ -42,7 +42,7 @@ window.onload = function() {
                         section.appendChild(div);
                     }
 
-                    let footer = document.createElement("footer"); // Postituse kirjutatud sisu ja like
+                    let footer = document.createElement("footer"); // Postituse kirjalik sisu ja like
                         let footer_p = document.createElement("p");
                         footer_p.innerText = (json[i].content); //Võtame json'ist content ja salvestame muutujasse footer_p ehk lisame postituse kommentaari
                         footer.appendChild(footer_p);
