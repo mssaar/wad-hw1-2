@@ -1,7 +1,7 @@
 window.onload = function() {
 
 
-    fetch('../res/json/myjson.json') //  ../..   -lähen 1x tagasi
+    fetch('https://api.npoint.io/c6922b3ef4c80f488eaf/'  ) //  või '../res/json/myjson.json'   (../   -lähen 1x tagasi)
         .then((response) => 
             response.json()) //Response on see,kus on status:200, body ning veel igast parameetrite väärtused. .json() loeb õigemale kujule
         .then(json => {
