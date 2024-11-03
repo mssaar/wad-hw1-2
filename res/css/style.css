@@ -150,6 +150,45 @@ section{
     width: 60%; /* Set the width as a percentage of the parent element */
 }
 
+/* Dropdown asjad */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown img {
+    display: block;
+    pointer-events: none;   /* teeb pildi "nähtamatuks" hiirele */
+    user-select: none;      /*                                  */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    border-radius: 5px;
+    background-color: #016ee3;
+    min-width: 200px;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.1);
+}
+
+.dropdown-content a {
+    font-size: 15px;
+    color: #ffffff;
+    padding: 10px;
+    display: block;
+    margin: auto;
+}
+.dropdown-content a:hover {
+    border-radius: 5px;
+    background-color: #375781;
+    margin: auto;
+}
+
+.show {
+    display: block;
+}
+
 #final{
     color: #fff;
     background-color: #8d4141;
