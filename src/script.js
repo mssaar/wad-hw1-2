@@ -73,15 +73,21 @@ window.onload = function() {
 function toggleDropdown() { // vajutades nupule (pildi peale), avaneb dropdown
     document.getElementById("dropdown").classList.toggle("show");
 }
-
+/*
 window.addEventListener('click', (event) => {
     let dropdownMenu = document.getElementById("dropdown");
+    let dropdownImage = document.querySelector('.dropdown img');
     // kui dropdown on lahti ja hiirevajutus on väljaspool dropdowni, siis eemaldab dropdowni
-    if (dropdownMenu.classList.contains("show") && !event.target.matches('.dropdown, .dropdown *')) {
-        dropdownMenu.classList.remove("show");
+    if (!event.target.matches('.dropdown-content, .dropdown-content *') &&
+        event.target !== dropdownImage) {
+        if (dropdownMenu.classList.contains("show")) {
+            dropdownMenu.classList.remove("show");
+        }
     }
 });
 
+
+ */
 {/* <section class="post">
 <h1 class="kuupaevJaPilt">
     <a class="userPic" href="#"><img src="res/images/user_icon.png" width="50" height="50" alt="My picture"></a>

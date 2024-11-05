@@ -158,8 +158,7 @@ section{
 
 .dropdown img {
     display: block;
-    pointer-events: none;   /* teeb pildi "nähtamatuks" hiirele */
-    user-select: none;      /*                                  */
+    cursor: pointer;
 }
 
 .dropdown-content {
