@@ -1,6 +1,6 @@
 function displayPosts() {
     //fetch('https://api.npoint.io/c6922b3ef4c80f488eaf/'  ) // saab muuta adrel: https://www.npoint.io/docs/c6922b3ef4c80f488eaf
-    fetch('./../res/json/myjson.json') //  või '../res/json/myjson.json'   (../   -lähen 1x tagasi)
+    fetch('./res/json/myjson.json') //  või '../res/json/myjson.json'   (../   -lähen 1x tagasi)
         .then((response) =>
             response.json()) //Response on see,kus on status:200, body ning veel igast parameetrite väärtused. .json() loeb õigemale kujule
         .then(json => {
